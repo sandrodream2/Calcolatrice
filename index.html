@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcolatrice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tabs">
+  <button class="tab active" data-tab="calc">Calcolatrice</button>
+  <button class="tab" data-tab="valuta">Valuta</button>
+  <button class="tab" data-tab="peso">Peso</button>
+  <button class="tab" data-tab="altezza">Altezza</button>
+</div>
+
+<!-- Calcolatrice -->
+<section id="calc" class="panel active">
+  <input id="display" type="text" readonly>
+  <div class="keys">
+    <button class="key action" data-key="C">C</button>
+    <button class="key action" data-key="←">←</button>
+    <button class="key action" data-key="%">%</button>
+    <button class="key op" data-key="/">÷</button>
+    <button class="key" data-key="7">7</button>
+    <button class="key" data-key="8">8</button>
+    <button class="key" data-key="9">9</button>
+    <button class="key op" data-key="*">×</button>
+    <button class="key" data-key="4">4</button>
+    <button class="key" data-key="5">5</button>
+    <button class="key" data-key="6">6</button>
+    <button class="key op" data-key="-">−</button>
+    <button class="key" data-key="1">1</button>
+    <button class="key" data-key="2">2</button>
+    <button class="key" data-key="3">3</button>
+    <button class="key op" data-key="+">+</button>
+    <button class="key" data-key=".">,</button>
+    <button class="key" data-key="0">0</button>
+    <button class="key action" data-key="toggle">±</button>
+    <button class="key op" data-key="=">=</button>
+  </div>
+</section>
+
+<!-- Valuta -->
+<section id="valuta" class="panel converter">
+  <div class="field">
+    <label>Importo</label>
+    <input id="val-importo" type="number" step="any" value="1">
+  </div>
+  <div class="field">
+    <label>Da</label>
+    <select id="val-da">
+      <option value="EUR">EUR — Euro</option>
+      <option value="USD">USD — Dollaro USA</option>
+      <option value="GBP">GBP — Sterlina UK</option>
+      <option value="CHF">CHF — Franco svizzero</option>
+      <option value="JPY">JPY — Yen giapponese</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>A</label>
+    <select id="val-a">
+      <option value="EUR">EUR — Euro</option>
+      <option value="USD" selected>USD — Dollaro USA</option>
+      <option value="GBP">GBP — Sterlina UK</option>
+      <option value="CHF">CHF — Franco svizzero</option>
+      <option value="JPY">JPY — Yen giapponese</option>
+    </select>
+  </div>
+  <div class="result" id="val-risultato"></div>
+</section>
+
+<!-- Peso -->
+<section id="peso" class="panel converter">
+  <div class="field">
+    <label>Peso</label>
+    <input id="pes-importo" type="number" step="any" value="1">
+  </div>
+  <div class="field">
+    <label>Da</label>
+    <select id="pes-da">
+      <option value="kg">kg — Chilogrammi</option>
+      <option value="g">g — Grammi</option>
+      <option value="lb">lb — Libbre</option>
+      <option value="oz">oz — Once</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>A</label>
+    <select id="pes-a">
+      <option value="kg">kg — Chilogrammi</option>
+      <option value="g">g — Grammi</option>
+      <option value="lb">lb — Libbre</option>
+      <option value="oz">oz — Once</option>
+    </select>
+  </div>
+  <div class="result" id="pes-risultato"></div>
+</section>
+
+<!-- Altezza -->
+<section id="altezza" class="panel converter">
+  <div class="field">
+    <label>Altezza</label>
+    <input id="alt-importo" type="number" step="any" value="1">
+  </div>
+  <div class="field">
+    <label>Da</label>
+    <select id="alt-da">
+      <option value="m">m — Metri</option>
+      <option value="cm">cm — Centimetri</option>
+      <option value="ft">ft — Piedi</option>
+      <option value="in">in — Pollici</option>
+    </select>
+  </div>
+  <div class="field">
+    <label>A</label>
+    <select id="alt-a">
+      <option value="m">m — Metri</option>
+      <option value="cm">cm — Centimetri</option>
+      <option value="ft">ft — Piedi</option>
+      <option value="in">in — Pollici</option>
+    </select>
+  </div>
+  <div class="result" id="alt-risultato"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
