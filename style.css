@@ -38,41 +38,95 @@ body {
   box-shadow: 0 4px 16px rgba(0,0,0,.08);
   padding: 20px;
   width: 100%;
-  max-width: 340px;
+  max-width: 400px;
 }
 
 .panel.active { display: block; }
 
-#display {
-  width: 100%;
-  font-size: 28px;
-  text-align: right;
-  padding: 14px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  background: #fafafa;
+/* ---------- Casio-look scientifica ---------- */
+#calc { background: #2b2f36; border-radius: 14px; }
+
+.brand {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #9aa3ad;
+  margin-bottom: 8px;
 }
 
-.keys {
+#mode-indicator { color: #7dd3fc; }
+#shift-indicator { color: #f59e0b; margin-left: 6px; visibility: hidden; }
+#shift-indicator.on { visibility: visible; }
+
+.screen {
+  background: #b8c9a9;
+  border: 3px solid #1f2228;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  min-height: 78px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "Courier New", monospace;
+  text-align: right;
+  overflow: hidden;
+}
+
+.screen .expr {
+  font-size: 13px;
+  color: #3d4a33;
+  min-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.screen .main {
+  font-size: 30px;
+  font-weight: 700;
+  color: #1c2415;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.screen .main.error { color: #b91c1c; }
+
+.keys.sci {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  gap: 6px;
 }
 
 .key {
-  padding: 16px 0;
-  font-size: 18px;
-  border: none;
-  border-radius: 10px;
+  padding: 12px 0;
+  font-size: 16px;
+  border: 1px solid #3a3f47;
+  border-bottom-width: 3px;
+  border-radius: 6px;
   background: #eef0f3;
   cursor: pointer;
+  color: #222;
 }
 
-.key:hover { background: #e0e4ea; }
-.key.op { background: #2563eb; color: #fff; }
-.key.action { background: #f59e0b; color: #fff; }
+.key:active { transform: translateY(1px); border-bottom-width: 2px; }
+.key.fn { background: #d9dee5; font-size: 14px; }
+.key.fn.on { background: #f59e0b; color: #fff; }
+.key.op { background: #2563eb; color: #fff; border-color: #1d4ed8; }
+.key.action { background: #d64545; color: #fff; border-color: #b32d2d; }
+.key.eq { background: #15803d; color: #fff; border-color: #166534; grid-column: span 2; }
 
+.hint {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #9aa3ad;
+  text-align: center;
+}
+
+/* ---------- Convertitori ---------- */
 .converter .field { margin-bottom: 14px; }
 
 .converter label {

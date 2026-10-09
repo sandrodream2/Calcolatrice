@@ -1,10 +1,10 @@
 # Calcolatrice
 
-Calcolatrice web semplice con funzioni di conversione per valuta, peso e altezza.
+Calcolatrice scientifica web stile Casio con funzioni di conversione per valuta, peso e altezza.
 
 ## Funzionalità
 
-- **Calcolatrice**: operazioni di base (+, −, ×, ÷), percentuale, cambio segno, cancellazione
+- **Scientifica (stile Casio)**: display a due righe, modalità DEG/RAD, sin/cos/tan + inverse (SHIFT), ln, log, exp, 10ˣ, √, ∛, x², x³, xʸ, fattoriale, π, e, ×10ˣ, parentesi, Ans, percentuale stile Casio (es. `100+10%` = 110)
 - **Valuta**: conversione tra EUR, USD, GBP, CHF, JPY (tassi indicativi)
 - **Peso**: conversione tra kg, g, lb, oz
 - **Altezza**: conversione tra m, cm, ft, in

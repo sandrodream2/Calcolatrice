@@ -3,42 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calcolatrice</title>
+<title>Calcolatrice Scientifica</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="tabs">
-  <button class="tab active" data-tab="calc">Calcolatrice</button>
+  <button class="tab active" data-tab="calc">Scientifica</button>
   <button class="tab" data-tab="valuta">Valuta</button>
   <button class="tab" data-tab="peso">Peso</button>
   <button class="tab" data-tab="altezza">Altezza</button>
 </div>
 
-<!-- Calcolatrice -->
+<!-- Calcolatrice scientifica -->
 <section id="calc" class="panel active">
-  <input id="display" type="text" readonly>
-  <div class="keys">
-    <button class="key action" data-key="C">C</button>
-    <button class="key action" data-key="←">←</button>
-    <button class="key action" data-key="%">%</button>
-    <button class="key op" data-key="/">÷</button>
-    <button class="key" data-key="7">7</button>
-    <button class="key" data-key="8">8</button>
-    <button class="key" data-key="9">9</button>
-    <button class="key op" data-key="*">×</button>
-    <button class="key" data-key="4">4</button>
-    <button class="key" data-key="5">5</button>
-    <button class="key" data-key="6">6</button>
-    <button class="key op" data-key="-">−</button>
-    <button class="key" data-key="1">1</button>
-    <button class="key" data-key="2">2</button>
-    <button class="key" data-key="3">3</button>
-    <button class="key op" data-key="+">+</button>
-    <button class="key" data-key=".">,</button>
-    <button class="key" data-key="0">0</button>
-    <button class="key action" data-key="toggle">±</button>
-    <button class="key op" data-key="=">=</button>
+  <div class="brand">CASIO&nbsp;STYLE &nbsp;·&nbsp; <span id="mode-indicator">DEG</span> &nbsp;·&nbsp; <span id="hyp-indicator"></span><span id="shift-indicator">SHIFT</span></div>
+  <div class="screen">
+    <div class="expr" id="expr-display">&nbsp;</div>
+    <div class="main" id="display">0</div>
   </div>
+  <div class="keys sci">
+    <button class="key fn" data-ins="shift" id="btn-shift">SHIFT</button>
+    <button class="key fn" data-ins="mode">DEG</button>
+    <button class="key fn" data-ins="(">(</button>
+    <button class="key fn" data-ins=")">)</button>
+
+    <button class="key fn" data-ins="sin(">sin</button>
+    <button class="key fn" data-ins="cos(">cos</button>
+    <button class="key fn" data-ins="tan(">tan</button>
+    <button class="key fn" data-ins="pi">π</button>
+
+    <button class="key fn" data-ins="ln(">ln</button>
+    <button class="key fn" data-ins="log(">log</button>
+    <button class="key fn" data-ins="sqrt(">√</button>
+    <button class="key fn" data-ins="e">e</button>
+
+    <button class="key fn" data-ins="^2">x²</button>
+    <button class="key fn" data-ins="^">xʸ</button>
+    <button class="key fn" data-ins="fact(">x!</button>
+    <button class="key fn" data-ins="Ans">Ans</button>
+
+    <button class="key action" data-ins="C">AC</button>
+    <button class="key action" data-ins="DEL">DEL</button>
+    <button class="key fn" data-ins="%">%</button>
+    <button class="key op" data-ins="/">÷</button>
+
+    <button class="key" data-ins="7">7</button>
+    <button class="key" data-ins="8">8</button>
+    <button class="key" data-ins="9">9</button>
+    <button class="key op" data-ins="*">×</button>
+
+    <button class="key" data-ins="4">4</button>
+    <button class="key" data-ins="5">5</button>
+    <button class="key" data-ins="6">6</button>
+    <button class="key op" data-ins="-">−</button>
+
+    <button class="key" data-ins="1">1</button>
+    <button class="key" data-ins="2">2</button>
+    <button class="key" data-ins="3">3</button>
+    <button class="key op" data-ins="+">+</button>
+
+    <button class="key" data-ins="0">0</button>
+    <button class="key" data-ins=".">,</button>
+    <button class="key fn" data-ins="EXP">×10ˣ</button>
+    <button class="key eq" data-ins="=">=</button>
+  </div>
+  <div class="hint">SHIFT: asin/acos/atan, 10ˣ, eˣ, x³, ∛, ¹/x</div>
 </section>
 
 <!-- Valuta -->
