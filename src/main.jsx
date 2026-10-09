@@ -1,1 +1,9 @@
-successfully downloaded text file (SHA: 569fdf2fddc90a70ca8e15870aa482afd5946a87)
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

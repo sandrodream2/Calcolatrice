@@ -1,1 +1,4 @@
-successfully downloaded text file (SHA: f99f737495f61bf1490dc592b9427ccb1be11c0d)
+node_modules/
+dist/
+.DS_Store
+*.local
